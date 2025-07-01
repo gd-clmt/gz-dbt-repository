@@ -32,3 +32,48 @@ sources:
             tests:
               - unique
               - not_null
+
+
+models:
+  - name: finance_days
+    description: greenwez final output for finance team // mart
+    columns:
+      - name: date_date
+        description: primary key of the table
+        tests:
+        - unique
+        - not_null
+      - name: number_of_transactions
+        description: Daily number of transactions (i.e. COUNT DISTINCT orders_id)
+        tests:
+        - not_null
+      - name: total_revenue
+        description: Daily revenue (i.e. SUM of the revenues of the day)
+        tests:
+        - not_null
+      - name: average_basket
+        description: Daily average basket (i.e. SUM of the revenues of the day / COUNT DISTINCT orders_id)
+        tests:
+        - not_null
+      - name: operational_margin
+        description: Daily operational margin (i.e. margin + shipping_fee - log_cost - ship_cost)
+        tests:
+        - not_null
+      - name: total_purchase_cost
+        description: Daily purchase cost (i.e. purchase_price x quantity)
+        tests:
+        - not_null
+      - name: total_shipping_fee
+        description: Daily shipping fee (i.e. SUM of the shipping fees of the day)
+        tests:
+        - not_null
+      - name: total_logcost
+        description: Daily log costs (i.e. SUM of the logcost of the day)
+        tests:
+        - not_null
+      - name: total_of_products_sold
+        description: Daily products sold (i.e. SUM of the quantities sold each day)
+        tests:
+        - not_null
+
+
