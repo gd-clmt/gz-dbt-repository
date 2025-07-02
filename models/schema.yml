@@ -78,11 +78,11 @@ models:
         tests:
         - unique
         - not_null
-      - name: number_of_transactions
+      - name: nb_transactions
         description: Daily number of transactions (i.e. COUNT DISTINCT orders_id)
         tests:
         - not_null
-      - name: total_revenue
+      - name: revenue
         description: Daily revenue (i.e. SUM of the revenues of the day)
         tests:
         - not_null
@@ -94,19 +94,19 @@ models:
         description: Daily operational margin (i.e. margin + shipping_fee - log_cost - ship_cost)
         tests:
         - not_null
-      - name: total_purchase_cost
+      - name: purchase_cost
         description: Daily purchase cost (i.e. purchase_price x quantity)
         tests:
         - not_null
-      - name: total_shipping_fee
+      - name: shipping_fee
         description: Daily shipping fee (i.e. SUM of the shipping fees of the day)
         tests:
         - not_null
-      - name: total_logcost
+      - name: log_cost
         description: Daily log costs (i.e. SUM of the logcost of the day)
         tests:
         - not_null
-      - name: total_of_products_sold
+      - name: quantity
         description: Daily products sold (i.e. SUM of the quantities sold each day)
         tests:
         - not_null
