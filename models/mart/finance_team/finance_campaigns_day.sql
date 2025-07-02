@@ -2,7 +2,7 @@ WITH sub_join_finance_campaigns_day AS (
 
 SELECT * 
 FROM {{ ref('finance_days') }} AS finance
-LEFT JOIN {{ ref('int_campaigns_day') }} campaign
+RIGHT JOIN {{ ref('int_campaigns_day') }} campaign
 USING (date_date)
 
 )
