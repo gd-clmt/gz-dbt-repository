@@ -32,7 +32,42 @@ sources:
             tests:
               - unique
               - not_null
-
+      - name: adwords_greenweez
+        identifier: raw_gz_adwords #Quel est le nom exacte de la table dans BQ
+        description: Adwords campaigns of greewneez / we have one row per campaign_key found in each date_date
+        columns:
+          - name: "(campaign_key || '-' || date_date)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
+      - name: bing_greenweez
+        identifier: raw_gz_bing #Quel est le nom exacte de la table dans BQ
+        description: Bing campaigns of greewneez / we have one row per campaign_key found in each date_date
+        columns:
+          - name: "(campaign_key || '-' || date_date)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
+      - name: criteo_greenweez
+        identifier: raw_gz_criteo #Quel est le nom exacte de la table dans BQ
+        description: Criteo campaigns of greewneez / we have one row per campaign_key found in each date_date
+        columns:
+          - name: "(campaign_key || '-' || date_date)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
+      - name: facebook_greenweez
+        identifier: raw_gz_facebook #Quel est le nom exacte de la table dans BQ
+        description: Facebook campaigns of greewneez / we have one row per campaign_key found in each date_date
+        columns:
+          - name: "(campaign_key || '-' || date_date)"
+            description: primary key of the table
+            tests:
+              - unique
+              - not_null
 
 models:
   - name: finance_days
